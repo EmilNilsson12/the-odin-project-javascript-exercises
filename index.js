@@ -87,3 +87,4 @@ function reverseStringClick(evt) {
 //------------ Allows user to complete input with Enter key ------------
 
 
+import { removeFromArray } from './removeFromArray/removeFromArray.js';
