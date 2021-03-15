@@ -59,3 +59,31 @@ function repeatStringClick(evt) {
         }
 }
 //------------ Allows user to complete input with Enter key ------------
+
+
+import { reverseString } from './reverseString/reverseString.js';
+
+
+const reverseStringInputText = document.getElementById('input-reverse-string-text');
+const reverseStringBtn = document.getElementById('btn-reverse-string');
+const reverseStringOutput = document.getElementById('output-reverse-string');
+
+
+reverseStringBtn.addEventListener('click', () => {
+        reverseStringOutput.innerHTML =  `Message reversed: <br />"${reverseString(reverseStringInputText.value)}"`;
+})
+
+
+//------------ Allows user to complete input with Enter key ------------
+caesarInputText.addEventListener('keyup', reverseStringClick);
+caesarInputNum.addEventListener('keyup', reverseStringClick);
+
+function reverseStringClick(evt) {
+        if (evt.key == 'Enter') {
+            evt.preventDefault();
+            reverseStringBtn.click();
+        }
+}
+//------------ Allows user to complete input with Enter key ------------
+
+
