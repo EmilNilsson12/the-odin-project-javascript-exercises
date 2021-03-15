@@ -49,8 +49,8 @@ repeatStringBtn.addEventListener('click', () => {
 
 
 //------------ Allows user to complete input with Enter key ------------
-caesarInputText.addEventListener('keyup', repeatStringClick);
-caesarInputNum.addEventListener('keyup', repeatStringClick);
+repeatStringInputText.addEventListener('keyup', repeatStringClick);
+repeatStringInputNum.addEventListener('keyup', repeatStringClick);
 
 function repeatStringClick(evt) {
         if (evt.key == 'Enter') {
@@ -88,3 +88,30 @@ function reverseStringClick(evt) {
 
 
 import { removeFromArray } from './removeFromArray/removeFromArray.js';
+
+
+import { sumAll } from './sumAll/sumAll.js';
+
+
+const sumAllInputNum1 = document.getElementById('input-sum-all-1');
+const sumAllInputNum2 = document.getElementById('input-sum-all-2');
+const sumAllBtn = document.getElementById('btn-sum-all');
+const sumAllOutput = document.getElementById('output-sum-all');
+
+
+sumAllBtn.addEventListener('click', () => {
+        sumAllOutput.innerHTML =  `Sum of all numbers between "${sumAllInputNum1.value}" and "${sumAllInputNum2.value}": <br />${sumAll(parseInt(sumAllInputNum1.value), parseInt(sumAllInputNum2.value))}`;
+});
+
+
+//------------ Allows user to complete input with Enter key ------------
+sumAllInputNum1.addEventListener('keyup', sumAllClick);
+sumAllInputNum2.addEventListener('keyup', sumAllClick);
+
+function sumAllClick(evt) {
+        if (evt.key == 'Enter') {
+            evt.preventDefault();
+            sumAllOutput.click();
+        }
+}
+//------------ Allows user to complete input with Enter key ------------
