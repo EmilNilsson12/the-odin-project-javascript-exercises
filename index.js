@@ -12,16 +12,6 @@ caesarBtn.addEventListener('click', () => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
 //------------ Allows user to complete input with Enter key ------------
 caesarInputText.addEventListener('keyup', caesarClick);
 caesarInputNum.addEventListener('keyup', caesarClick);
@@ -33,3 +23,10 @@ function caesarClick(evt) {
         }
 }
 //------------ Allows user to complete input with Enter key ------------
+
+
+
+
+import { helloWorld } from './helloWorld/helloWorld.js'
+const helloWorldP = document.getElementById('output-hello-world');
+helloWorldP.innerHTML = helloWorld();
