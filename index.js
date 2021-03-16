@@ -160,7 +160,6 @@ import {
 
 
 
-const factorialBtn = document.getElementById('btn-factorial');
 
 
 const calculatorOutput = document.getElementById('output-calculator');
@@ -230,6 +229,7 @@ powerBtn.addEventListener('click', () => {
         calculatorOutput.innerHTML = `${base.value} <sup>${exponent.value}</sup> is equal to ${exponentiation}`
 });
 
+const factorialBtn = document.getElementById('btn-factorial');
 factorialBtn.addEventListener('click', () => {
         const factorialInput = document.getElementById('input-factorial');
         
@@ -269,3 +269,15 @@ function palindromesClick(evt) {
         }
 }
 //------------ Allows user to complete input with Enter key ------------
+
+
+import { fibonacci } from './fibonacci/fibonacci.js'
+
+const fibonacciBtn = document.getElementById('btn-fibonacci');
+const fibonacciOutput = document.getElementById('output-fibonacci');
+fibonacciBtn.addEventListener('click', () => {
+        const fibonacciInput = document.getElementById('input-fibonacci');
+        const fibonacciResult = fibonacci(parseInt(fibonacciInput.value));
+        fibonacciOutput.innerHTML = `Value of fibonacci index ${fibonacciInput.value} is equal to ${fibonacciResult}`
+});
+
