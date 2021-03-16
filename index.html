@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script type="module" src="index.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <h1>The Odin Project - javascript exercises</h1>
 
@@ -57,7 +59,8 @@
                 <p>The function removeFromArray(inputArr, ...valuesToFilter)</p>
                 <label for="input-remove-from-array">The function works like this:</label><br />
                 <p>
-                    Given two or more parameters where the first parameter is an array, and the rest are values which shall be filtered out.
+                    Given two or more parameters where the first parameter is an array, and the rest are values which
+                    shall be filtered out.
                     Returns an array of the remaining values.
                 </p>
                 <code>
@@ -137,6 +140,75 @@
     </section>
 
 
+
+
+    <section>
+        <h2>calculator</h2>
+        <div class="exercise-box">
+            <div class="exercise-input">
+
+                <section>
+                    <h3>add two numbers</h3>
+                    <input type="number" class="input-add">
+                    <input type="number" class="input-add">
+
+                    <br /><button id="btn-add">Click to add</button>
+                </section>
+
+                <section>
+                    <h3>subtract two numbers</h3>
+                    <input type="number" class="input-subtract">
+                    <input type="number" class="input-subtract">
+
+                    <br /><button id="btn-subtract">Click to subtract</button>
+                </section>
+
+                <section>
+                    <h3>add 2 or more numbers</h3>
+                    <input type="number" class="input-sum">
+                    <input type="number" class="input-sum">
+                    <button id="more-nums-sum">Add more numbers to the sum</button>
+
+                    <br /><button id="btn-sum">Click to get sum</button>
+                </section>
+
+                <section>
+                    <h3>multiply 2 or more numbers</h3>
+                    <input type="number" class="input-product">
+                    <input type="number" class="input-product">
+                    <button id="more-nums-product">Add more numbers to the product</button>
+
+                    <br /><button id="btn-multiply">Click to get product</button>
+                </section>
+
+                <section>
+                    <h3>raise a number to the power of another number</h3>
+                    <input type="number" id="input-power-base">
+                    <input type="number" id="input-power-exponent">
+
+                    <br /><button id="btn-power">Click to get exponentiation</button>
+                </section>
+
+                <section>
+                    <h3>Click to get the factorial of a number</h3>
+                    <input type="number" id="input-factorial">
+                    
+                    <br /><button id="btn-factorial">Click to get factorial</button>
+                </section>
+
+            </div>
+            <div>
+                <h3>Output:</h3>
+                <p id="output-calculator"></p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
     <section>
         <h2>casear cipher</h2>
         <div class="exercise-box">
@@ -149,11 +221,12 @@
             </div>
             <div>
                 <h3>Output:</h3>
-                <p id="output-caesar"></p>            
+                <p id="output-caesar"></p>
             </div>
         </div>
     </section>
 
 
 </body>
+
 </html>
