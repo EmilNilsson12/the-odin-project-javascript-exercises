@@ -126,3 +126,23 @@ leapYearBtn.addEventListener('click', () => {
 });
 
 
+import { ftoc, ctof } from './tempConversion/tempConversion.js';
+
+
+const ctofInput = document.getElementById('input-ctof');
+const ctofBtn = document.getElementById('btn-ctof');
+const ftocInput = document.getElementById('input-ftoc');
+const ftocBtn = document.getElementById('btn-ftoc');
+
+const tempConversionOutput = document.getElementById('output-temp-conversion');
+
+
+ctofBtn.addEventListener('click', () => {
+        const newTemp = ctof(parseInt(ctofInput.value));
+        tempConversionOutput.innerHTML = `${ctofInput.value} degrees celcius is equal to ${newTemp} degrees farenheit.`
+});
+
+ftocBtn.addEventListener('click', () => {
+        const newTemp = ctof(parseInt(ftocInput.value));
+        tempConversionOutput.innerHTML = `${ftocInput.value} degrees farenheit is equal to ${newTemp} degrees celcius.`
+});
