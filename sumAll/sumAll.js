@@ -1,6 +1,4 @@
 export const sumAll = function(start, end) {
-    console.log("start: ", start)
-    console.log("end: ", end)
 
     if (end < start) {
         let temp = end;
@@ -15,8 +13,6 @@ export const sumAll = function(start, end) {
     let sum = 0;
     for (let i = start; i <= end; i++) {
         sum += i;
-        console.log("i: ", i)
-        console.log("Sum: ", sum)
     }
 
 
@@ -25,5 +21,4 @@ export const sumAll = function(start, end) {
 }
 
 
-console.log(sumAll(-10, 4))
 //module.exports = sumAll
