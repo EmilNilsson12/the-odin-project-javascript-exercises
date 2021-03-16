@@ -143,7 +143,7 @@ ctofBtn.addEventListener('click', () => {
 });
 
 ftocBtn.addEventListener('click', () => {
-        const newTemp = ctof(parseInt(ftocInput.value));
+        const newTemp = ftoc(parseInt(ftocInput.value));
         tempConversionOutput.innerHTML = `${ftocInput.value} degrees farenheit is equal to ${newTemp} degrees celcius.`
 });
 
@@ -236,3 +236,36 @@ factorialBtn.addEventListener('click', () => {
         const factorialResult = factorial(parseInt(factorialInput.value));
         calculatorOutput.innerHTML = `${factorialInput.value} factorial is equal to ${factorialResult}`
 });
+
+
+import { palindromes } from './palindromes/palindromes.js'
+
+const palindromeInput = document.getElementById('input-palindrome');
+const palindromeBtn = document.getElementById('btn-palindrome');
+const palindromeOutputTrue = document.getElementById('output-palindrome-true');
+const palindromeOutputFalse = document.getElementById('output-palindrome-false');
+
+
+palindromeBtn.addEventListener('click', () => {
+        const isPalindrome = palindromes(palindromeInput.value);
+
+        if (isPalindrome) {
+                palindromeOutputTrue.insertAdjacentHTML('afterbegin', `<li>${palindromeInput.value}</li>`)
+        }
+        else {
+                palindromeOutputFalse.insertAdjacentHTML('afterbegin', `<li>${palindromeInput.value}</li>`)
+        }
+        palindromeInput.value = '';
+        palindromeInput.focus();
+});
+
+//------------ Allows user to complete input with Enter key ------------
+palindromeInput.addEventListener('keyup', palindromesClick);
+
+function palindromesClick(evt) {
+        if (evt.key == 'Enter') {
+                evt.preventDefault();
+                palindromeBtn.click();
+        }
+}
+//------------ Allows user to complete input with Enter key ------------
