@@ -104,14 +104,25 @@ sumAllBtn.addEventListener('click', () => {
 });
 
 
-//------------ Allows user to complete input with Enter key ------------
-sumAllInputNum1.addEventListener('keyup', sumAllClick);
-sumAllInputNum2.addEventListener('keyup', sumAllClick);
 
-function sumAllClick(evt) {
-        if (evt.key == 'Enter') {
-            evt.preventDefault();
-            sumAllOutput.click();
+
+
+import { leapYears } from './leapYears/leapYears.js';
+
+const leapYearInput = document.getElementById('input-leap-year');
+const leapYearBtn = document.getElementById('btn-leap-year');
+const leapYearOutput = document.getElementById('output-leap-year');
+
+
+leapYearBtn.addEventListener('click', () => {
+        const isLeapYear = leapYears(parseInt(leapYearInput.value));
+
+        if (isLeapYear) {
+                leapYearOutput.innerHTML =  `The year "${leapYearInput.value}" is a leap year!`;
         }
-}
-//------------ Allows user to complete input with Enter key ------------
+        else {
+                leapYearOutput.innerHTML =  `The year "${leapYearInput.value}" is not a leap year!`;
+        }
+});
+
+
